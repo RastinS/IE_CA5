@@ -1,4 +1,4 @@
-package Static;
+package ErrorClasses;
 
 public class HadSkillException extends Exception{
     public HadSkillException() {

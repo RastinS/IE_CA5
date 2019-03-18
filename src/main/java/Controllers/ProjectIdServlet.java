@@ -1,7 +1,5 @@
 package Controllers;
 
-
-import Database.Database;
 import Models.Project;
 import Models.User;
 import Services.ProjectService;
@@ -16,18 +14,6 @@ import java.io.IOException;
 
 @WebServlet ("/project")
 public class ProjectIdServlet extends HttpServlet {
-
-	@Override
-	public void init () throws ServletException {
-		super.init();
-		if (!Database.didInit()) {
-			try {
-				Database.init();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-	}
 
 	@Override
 	protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

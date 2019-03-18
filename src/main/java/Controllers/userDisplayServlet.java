@@ -1,6 +1,5 @@
 package Controllers;
 
-import Database.Database;
 import Models.User;
 import Services.UserService;
 
@@ -12,20 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Objects;
 
-
 @WebServlet ("/user")
 public class userDisplayServlet extends HttpServlet {
-	@Override
-	public void init () throws ServletException {
-		super.init();
-		if (!Database.didInit()) {
-			try {
-				Database.init();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-	}
 
 	@Override
 	protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

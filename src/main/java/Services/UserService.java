@@ -6,9 +6,9 @@ import Models.Project;
 import Models.Skill;
 import Models.User;
 import Repositories.UserRepository;
-import Static.HadEndorsedException;
-import Static.HadSkillException;
-import Static.SkillNotFoundException;
+import ErrorClasses.HadEndorsedException;
+import ErrorClasses.HadSkillException;
+import ErrorClasses.SkillNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;

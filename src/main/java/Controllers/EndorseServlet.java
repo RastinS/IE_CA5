@@ -1,8 +1,8 @@
 package Controllers;
 
 import Services.UserService;
-import Static.HadEndorsedException;
-import Static.SkillNotFoundException;
+import ErrorClasses.HadEndorsedException;
+import ErrorClasses.SkillNotFoundException;
 import javafx.util.Pair;
 
 import javax.servlet.ServletException;

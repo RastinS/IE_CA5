@@ -1,7 +1,7 @@
 package Models;
 
 import Repositories.SkillRepository;
-import Static.SkillNotFoundException;
+import ErrorClasses.SkillNotFoundException;
 import org.json.JSONException;
 
 import java.util.ArrayList;

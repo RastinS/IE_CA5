@@ -43,4 +43,9 @@ public class AddBidServlet extends HttpServlet {
 		request.setAttribute("project", project);
 		request.getRequestDispatcher("oneProject.jsp").forward(request, response);
 	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doGet(req, resp);
+	}
 }

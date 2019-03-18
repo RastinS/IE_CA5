@@ -1,4 +1,4 @@
-package Static;
+package ErrorClasses;
 
 public class SkillNotFoundException extends Exception {
 	public SkillNotFoundException () {

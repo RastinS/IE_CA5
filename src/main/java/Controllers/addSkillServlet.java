@@ -1,8 +1,8 @@
 package Controllers;
 
 import Services.UserService;
-import Static.HadSkillException;
-import Static.SkillNotFoundException;
+import ErrorClasses.HadSkillException;
+import ErrorClasses.SkillNotFoundException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
