@@ -1,5 +1,6 @@
 package Repositories;
 
+import Database.Database;
 import Models.User;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,5 +39,9 @@ public class UserRepository {
             users.add(setUser(usersArray.getString(i)));
         }
         return users;
+    }
+
+    public static List<User> getUsers() {
+        return Database.getUsers();
     }
 }
