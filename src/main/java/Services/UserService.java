@@ -78,10 +78,7 @@ public class UserService {
 		if (loggedInUser.hasEndorsed(skill))
 			throw new HadEndorsedException();
 
-		System.out.println(skill.getName());
-		System.out.println(skill.getPoint());
 		skill.addPoint();
-		System.out.println(skill.getPoint());
 		loggedInUser.addEndorsement(new Endorsement(loggedInUser, user, skill));
 	}
 

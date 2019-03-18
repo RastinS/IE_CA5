@@ -20,7 +20,7 @@ public class Endorse {
 		try {
 			JSONObject data = new JSONObject(req.getParameter("data"));
 			UserService.endorseSkill(data.getString("usersID"), data.getString("skillName"));
-			return ResponseEntity.ok("Endorsed succefully!");
+			return ResponseEntity.ok("Endorsed successfully!");
 		} catch (JSONException e) {
 			e.printStackTrace();
 		} catch (SkillNotFoundException e) {
