@@ -1,5 +1,6 @@
 package Repositories;
 
+import Database.Database;
 import Models.Bid;
 import Models.Project;
 import org.json.JSONArray;
@@ -31,5 +32,9 @@ public class ProjectRepository {
 			projects.add(setProject(projectsArray.getString(i)));
 		}
 		return projects;
+	}
+
+	public static List<Project> getProjects() {
+		return Database.getProjects();
 	}
 }
