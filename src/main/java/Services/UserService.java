@@ -71,13 +71,17 @@ public class UserService {
 		getLoggedInUser().addSkill(new Skill(skillName));
 	}
 
-	public static void endorseSkill (String ID, String skillName) throws SkillNotFoundException, HadEndorsedException {
+	public static void endorseSkill (String ID, String skillName) throws NullPointerException ,SkillNotFoundException, HadEndorsedException {
 		User  user         = findUserWithID(ID);
 		User  loggedInUser = getLoggedInUser();
 		Skill skill        = user.getSkill(skillName);
 		if (loggedInUser.hasEndorsed(skill))
 			throw new HadEndorsedException();
+
+		System.out.println(skill.getName());
+		System.out.println(skill.getPoint());
 		skill.addPoint();
+		System.out.println(skill.getPoint());
 		loggedInUser.addEndorsement(new Endorsement(loggedInUser, user, skill));
 	}
 
