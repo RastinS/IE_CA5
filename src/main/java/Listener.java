@@ -1,5 +1,3 @@
-package Extras;
-
 import Database.Database;
 
 import javax.servlet.ServletContextEvent;
