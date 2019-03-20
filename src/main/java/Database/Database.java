@@ -28,15 +28,15 @@ public class Database {
 		didInit = true;
 	}
 
-	public static void addProjects (String data) throws JSONException {
+	private static void addProjects (String data) throws JSONException {
 		projects = ProjectRepository.setProjects(data);
 	}
 
-	public static void addSkills (String data) throws JSONException {
+	private static void addSkills (String data) throws JSONException {
 		skills = SkillRepository.setSkills(data, "FROM_IO");
 	}
 
-	public static void addUsers () throws JSONException {
+	private static void addUsers () throws JSONException {
 		users = UserRepository.setUsers(Configs.USER_DATA);
 		UserRepository.setLoggedInUser(users.get(0));
 	}
