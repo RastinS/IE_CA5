@@ -8,7 +8,7 @@ request.open('POST', url, true);
 request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 request.onreadystatechange = function () {
-	if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+	if (request.readyState === request.DONE && request.status === 200) {
 		response = request.responseText;
 		getResponse(response);
 	}

@@ -23,7 +23,7 @@ public class AddSkill {
 			UserService.addSkillToLoggedInUser(data.getString("skillName"));
 			return ResponseEntity.ok("Skill added successfully!");
 		} catch (HadSkillException e) {
-			return new ResponseEntity<>("Skill already in skill set.", HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<>("Skill already in skill set.", HttpStatus.OK);
 		} catch (SkillNotFoundException e) {
 			return new ResponseEntity<>("Skill not in database.", HttpStatus.BAD_REQUEST);
 		} catch (JSONException e) {
